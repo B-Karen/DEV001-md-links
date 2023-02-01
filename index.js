@@ -1,4 +1,7 @@
 const fs = require('fs');
+const path= require('path');
+
+const rutaExiste=(route)=> fs.existsSync(route);
 
 const mdLinks = (path, options) => {
   return new Promise((resolve, reject) => {
@@ -12,6 +15,9 @@ const mdLinks = (path, options) => {
 
   });
 };
+
+
 module.exports = {
-  mdLinks
+  mdLinks,
+  rutaExiste,
 };
